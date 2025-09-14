@@ -1,11 +1,4 @@
 import { useMemo, useState } from "react";
-// import ContentHeader from "./components/ContentHeader";
-// import DishList from "./components/DishList";
-// import Filters from "./components/Filters";
-// import Footer from "./components/Footer";
-// import Header from "./components/Header";
-// import IngredientModal from "./components/IngredientModal";
-// import  initialDishes     from "./data/mockDishes";
 import initialDishes from "../data/mockDishes";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
@@ -14,8 +7,7 @@ import ContentHeader from "../components/ContentHeader";
 import DishList from "../components/DishList";
 import IngredientModal from "../components/IngredientModal";
 import Footer from "../components/Footer";
-// import { Route, Routes } from "react-router-dom";
-// import IngredientPage from "./Pages/IngredientPage";
+
 export default function MenuPage({setRecipe,selectIngredient}) {
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('Main Course');
@@ -23,7 +15,7 @@ export default function MenuPage({setRecipe,selectIngredient}) {
     const [showNonVeg, setShowNonVeg] = useState(false);
     const [cart, setCart] = useState({}); // { dishId: 1 }
     const [selectedDish, setSelectedDish] = useState(null);
-
+    
     const categories = ['Starter', 'Main Course', 'Desert', 'Sides'];
 
     const filteredDishes = useMemo(() => {
@@ -129,3 +121,4 @@ export default function MenuPage({setRecipe,selectIngredient}) {
         
     );
 }
+
