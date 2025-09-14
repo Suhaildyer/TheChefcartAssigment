@@ -5,14 +5,12 @@ import MenuPage from './Pages/MenuPage'
 import IngredientPage from './Pages/IngredientPage'
 import { Route, Routes } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+
 const App = () => { 
   const [recipe, setRecipe]=useState({})
   const navigate=useNavigate()
   const selectIngredient=()=>{
     navigate('/Ingredient')
-    
-
-
   }
   
  
